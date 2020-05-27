@@ -5,6 +5,7 @@
     Script is intended to help determine servers that are using an Exchange server to connect and send email.
    
     This is especially pertinent in a decomission scenario, where the logs are to be checked to ensure that all SMTP traffic has been moved to the correct endpoint.
+    
 .DESCRIPTION
     Logs on an Exchange 2010 servers are here by default.
     C:\Program Files\Microsoft\Exchange Server\V14\TransportRoles\Logs\ProtocolLog\SmtpReceive
@@ -12,6 +13,7 @@
  
     An empty array is declared that will be used to hold the data gathered during each iteration.
     This allows for the additional information to be easily added on, and then either echo it to the screen or export to a CSV file
+    
  Sample Exchange 2010 SMTP Receive log
  #Software: Microsoft Exchange Server
  #Version: 14.0.0.0
@@ -20,6 +22,7 @@
  #Fields: date-time,connector-id,session-id,sequence-number,local-endpoint,remote-endpoint,event,data,context
  2019-01-25T00:03:58.478Z,TAIL-EXCH-1\Internet Mail,08D675E58CA1DA38,0,10.0.0.6:25,185.234.217.220:61061,+,,
  2019-01-25T00:03:58.494Z,TAIL-EXCH-1\Internet Mail,08D675E58CA1DA38,1,10.0.0.6:25,185.234.217.220:61061,*,SMTPSubmit SMTPAcceptAnySender SMTPAcceptAuthoritativeDomainSender AcceptRoutingHeaders,Set Session Permissions
+
 
 .ASSUMPTIONS
 
@@ -32,6 +35,7 @@
   
     You can live with the Write-Host cmdlets :)
     You can add your error handling if you need it. 
+ 
  
 .VERSION
 
